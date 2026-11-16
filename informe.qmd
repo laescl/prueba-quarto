@@ -1,0 +1,37 @@
+---
+title: "informe.qmd"
+format: html
+editor: visual
+---
+
+#---
+title: "Mi primer informe"
+author: "Laura"
+format: html
+---
+
+## Pregunta
+
+¿Cómo se distribuyen por edad los pacientes del ejemplo?
+
+```{r}
+#| message: false
+library(tidyverse)
+
+pacientes <- tibble(
+  id   = 1:5,
+  edad = c(34, 67, 25, 81, 45),
+  sexo = c("Mujer", "Hombre", "Mujer", "Mujer", "Hombre")
+)
+```
+
+## Resultados
+
+La edad media es `r mean(pacientes$edad)` años.
+
+```{r}
+#| echo: false
+ggplot(pacientes, aes(x = sexo, y = edad)) +
+  geom_point(size = 3) +
+  labs(title = "Edad por sexo", x = NULL, y = "Edad (años)")
+```

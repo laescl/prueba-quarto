@@ -1,15 +1,8 @@
 ---
-title: "informe.qmd"
+title: "Mi primer informe"
 format: html
 editor: visual
 ---
-
-#---
-title: "Mi primer informe"
-author: "Laura"
-format: html
----
-
 ## Pregunta
 
 ¿Cómo se distribuyen por edad los pacientes del ejemplo?
